@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Enthusiast | Personal Brand</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #4F46E5, #06B6D4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .gradient-border {
+            position: relative;
+            background: linear-gradient(45deg, #4F46E5, #06B6D4);
+            padding: 1px;
+            border-radius: 0.75rem;
+        }
+
+        .gradient-border > div {
+            background: #111827;
+            border-radius: 0.75rem;
+        }
+
+        .skill-bar {
+            position: relative;
+            height: 8px;
+            background: #1F2937;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            position: absolute;
+            height: 100%;
+            background: linear-gradient(90deg, #4F46E5, #06B6D4);
+            border-radius: 4px;
+            width: 0;
+        }
+
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-gray-900/80 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold gradient-text">GS.</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-blue-500 transition-colors">Home</a>
+                <a href="#expertise" class="hover:text-blue-500 transition-colors">Expertise</a>
+                <a href="#experience" class="hover:text-blue-500 transition-colors">Experience</a>
+                <a href="#contact" class="hover:text-blue-500 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20">
+        <div class="max-w-6xl mx-auto px-4 py-20 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                Gaming <span class="gradient-text">Specialist</span>
+            </h1>
+            <div class="text-xl md:text-2xl text-gray-400 mb-8">
+                <span id="typed-text"></span>
+            </div>
+            <div class="flex justify-center space-x-4">
+                <button class="bg-gradient-to-r from-indigo-600 to-cyan-600 text-white px-8 py-3 rounded-lg hover:opacity-90 transition-opacity">
+                    My Portfolio
+                </button>
+                <button class="border border-gray-700 px-8 py-3 rounded-lg hover:border-blue-500 transition-colors">
+                    Contact Me
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-20 bg-gray-800/50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Gaming Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="gradient-border expertise-card">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4">Game Development</h3>
+                        <p class="text-gray-400 mb-4">Specialized in modern game engines and development tools</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="90"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gradient-border expertise-card">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4">Esports Analysis</h3>
+                        <p class="text-gray-400 mb-4">Professional analysis of competitive gaming strategies</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="85"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gradient-border expertise-card">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4">Content Creation</h3>
+                        <p class="text-gray-400 mb-4">Expert in gaming content and community building</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="95"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Gaming Journey</h2>
+            <div class="space-y-8">
+                <div class="gradient-border timeline-item">
+                    <div class="p-6">
+                        <div class="flex justify-between mb-4">
+                            <h3 class="text-xl font-bold">Professional Gamer</h3>
+                            <span class="text-gray-400">2020 - Present</span>
+                        </div>
+                        <p class="text-gray-400">Leading competitive teams and analyzing game strategies</p>
+                    </div>
+                </div>
+                <div class="gradient-border timeline-item">
+                    <div class="p-6">
+                        <div class="flex justify-between mb-4">
+                            <h3 class="text-xl font-bold">Game Developer</h3>
+                            <span class="text-gray-400">2018 - 2020</span>
+                        </div>
+                        <p class="text-gray-400">Created innovative gaming experiences using modern engines</p>
+                    </div>
+                </div>
+                <div class="gradient-border timeline-item">
+                    <div class="p-6">
+                        <div class="flex justify-between mb-4">
+                            <h3 class="text-xl font-bold">Content Creator</h3>
+                            <span class="text-gray-400">2016 - 2018</span>
+                        </div>
+                        <p class="text-gray-400">Built a gaming community through streaming and content</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800/50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Let's Connect</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="gradient-border">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4">Contact Information</h3>
+                        <div class="space-y-4 text-gray-400">
+                            <p>Email: gaming@specialist.com</p>
+                            <p>Discord: GamingPro#1234</p>
+                            <p>Twitter: @GamingSpecialist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gradient-border">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4">Quick Message</h3>
+                        <form class="space-y-4">
+                            <input type="text" placeholder="Your Name" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:border-blue-500 outline-none">
+                            <input type="email" placeholder="Your Email" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:border-blue-500 outline-none">
+                            <textarea placeholder="Your Message" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:border-blue-500 outline-none h-32"></textarea>
+                            <button class="w-full bg-gradient-to-r from-indigo-600 to-cyan-600 text-white px-8 py-3 rounded-lg hover:opacity-90 transition-opacity">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Typed.js initialization
+        new Typed('#typed-text', {
+            strings: [
+                'Gaming Industry Expert',
+                'Professional Analyst',
+                'Content Creator',
+                'Game Developer'
+            ],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
+
+        // GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animate expertise cards
+        document.querySelectorAll('.expertise-card').forEach((card, index) => {
+            gsap.from(card, {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                },
+                delay: index * 0.2
+            });
+        });
+
+        // Animate timeline items
+        document.querySelectorAll('.timeline-item').forEach((item, index) => {
+            gsap.from(item, {
+                opacity: 0,
+                x: index % 2 === 0 ? -50 : 50,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: item,
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+        });
+
+        // Animate skill bars
+        document.querySelectorAll('.skill-progress').forEach(progress => {
+            const progressValue = progress.getAttribute('data-progress');
+            gsap.to(progress, {
+                width: progressValue + '%',
+                duration: 1.5,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: progress,
+                    start: "top 80%",
+                }
+            });
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
